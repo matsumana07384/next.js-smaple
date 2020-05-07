@@ -1,3 +1,5 @@
+const debug = process.env.NODE_ENV !== 'production'
+
 module.exports = {
-    assetPrefix: '/next.js-smaple',
-  };
+  assetPrefix: !debug ? '/next.js-smaple/' : '',
+}
